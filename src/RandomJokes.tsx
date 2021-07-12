@@ -10,17 +10,19 @@ function RandomJokes() {
 
   const api = new Api();
 
-  useEffect(async () => {
-    try {
-      setLoading(true);
-      const { data, status } = await api.getRandomJoke();
-      setJoke(data.setup);
-      setJoke(data.punchline);
-    } catch (e) {
-      console.error(e);
-    } finally {
-      setLoading(false);
-    }
+  useEffect(() => {
+    (async () => {
+      try {
+        setLoading(true);
+        const { data, status } = await api.getRandomJoke();
+        setQuestion(data.setup);
+        setJoke(data.punchline);
+      } catch (e) {
+        console.error(e);
+      } finally {
+        setLoading(false);
+      }
+    })();
   }, []);
 
    return (
@@ -36,11 +38,24 @@ function RandomJokes() {
             </Typography>
           </Grid>
         )}
-        {joke && (
+        {question && (
+          <Grid item xs={12}>
+            <Button
+              variant="contained"
+              size="medium"
+              color="primary"
+              onClick={() => setShowJoke(true)}
+            >
+              Show me a joke!
+            </Button>
+          </Grid>
+        )}
+        {joke && showJoke && (
           <Grid item xs={12}>
             <Typography variant="body1">
               {joke}
             </Typography>
+            <img src="https://i.pinimg.com/originals/2d/fa/35/2dfa355f1d25b69d514147a48faea57f.gif" />
           </Grid>
         )}
       </Grid>
