@@ -1,0 +1,103 @@
+{
+  "name": "@klkarpenko/mf-random-jokes",
+  "version": "0.1.0",
+  "private": false,
+  "author": "kl2.karpenko@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kl2karpenko/mf-random-jokes.git"
+  },
+  "main": "cjs/src/index.js",
+  "module": "esm/src/index.js",
+  "files": [
+    "cjs",
+    "esm"
+  ],
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@klkarpenko/mf-scripts": "0.1.2",
+    "@material-ui/core": "^4.12.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/axios": "^0.14.0",
+    "@types/react-dom": "^17.0.8",
+    "axios": "^0.21.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "run-p": "^0.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.13.14",
+    "@babel/core": "7.13.14",
+    "@babel/plugin-proposal-class-properties": "7.14.5",
+    "@babel/preset-env": "7.13.12",
+    "@babel/preset-react": "7.13.13",
+    "@babel/preset-typescript": "7.13.0",
+    "@testing-library/jest-dom": "5.14.1",
+    "@testing-library/react": "11.2.7",
+    "@types/jest": "26.0.23",
+    "@types/prop-types": "15.7.3",
+    "@types/react": "17.0.3",
+    "@types/react-router-dom": "5.1.7",
+    "@types/testing-library__jest-dom": "5.14.0",
+    "@types/testing-library__react": "10.2.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-transform-imports": "2.0.0",
+    "compression-webpack-plugin": "^8.0.1",
+    "copyfiles": "2.4.1",
+    "cross-env": "7.0.3",
+    "eslint": "7.23.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-babel": "5.3.1",
+    "eslint-plugin-prettier": "3.3.1",
+    "eslint-plugin-react": "7.24.0",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "fork-ts-checker-webpack-plugin": "^6.2.12",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "26.6.3",
+    "jest-environment-jsdom-fourteen": "0.1.0",
+    "jest-junit": "12.0.0",
+    "jest-sonar-reporter": "2.0.0",
+    "jest-svg-transformer": "1.0.0",
+    "react-intl": "^5.20.3",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "ts-essentials": "7.0.1",
+    "ts-jest": "26.5.4",
+    "ts-loader": "9.2.3",
+    "typescript": "4.2.3",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "start": "mf-scripts start",
+    "build": "tsc --outDir cjs && tsc --outDir esm --module ES6",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "bugs": {
+    "url": "https://github.com/kl2karpenko/mf-random-jokes/issues"
+  },
+  "homepage": "https://github.com/kl2karpenko/mf-random-jokes#readme",
+  "license": "ISC"
+}
