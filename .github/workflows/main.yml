@@ -29,6 +29,14 @@ jobs:
           node-version: '12.13'
 
       # Runs a single command using the runners shell
+      - name: login
+        run: npm login --registry=https://registry.npmjs.org/ --scope=@klkarpenko
+        env:
+          USERNAME: kl2karpenko
+          TOKEN: Kbkbz1993$
+          PUBLIC-EMAIL-ADDRESS: kl2.karpenko@gmail.com
+
+      # Runs a single command using the runners shell
       - name: install_deps
         run: yarn install
 
