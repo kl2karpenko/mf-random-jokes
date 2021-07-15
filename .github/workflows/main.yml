@@ -30,13 +30,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: install_deps
-        run: |
-          npm login --registry=https://registry.npmjs.org/ --scope=@klkarpenko
-          yarn install
-        env:
-          USERNAME: ${{ secrets.USERNAME }}
-          TOKEN: ${{ secrets.TOKEN }}
-          PUBLIC-EMAIL-ADDRESS: ${{ secrets.EMAIL }}
+        run: yarn install
 
       # Runs a single command using the runners shell
       - name: lint
