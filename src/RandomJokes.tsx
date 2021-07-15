@@ -14,7 +14,7 @@ function RandomJokes() {
     (async () => {
       try {
         setLoading(true);
-        const { data, status } = await api.getRandomJoke();
+        const { data } = await api.getRandomJoke();
         setQuestion(data.setup);
         setJoke(data.punchline);
       } catch (e) {
