@@ -83,7 +83,7 @@
   "scripts": {
     "start": "mf-scripts start",
     "build": "tsc --outDir cjs && tsc --outDir esm --module ES6",
-    "test": "jest",
+    "test": "jest --env=jest-environment-jsdom-fourteen",
     "lint": "eslint . --ext .ts,.tsx"
   },
   "eslintConfig": {

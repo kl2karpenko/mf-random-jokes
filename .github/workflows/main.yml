@@ -35,3 +35,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: lint
         run: yarn lint
+
+      # Runs a single command using the runners shell
+      - name: test
+        run: yarn test
