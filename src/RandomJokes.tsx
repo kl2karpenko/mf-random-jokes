@@ -33,7 +33,7 @@ export default function RandomJokes() {
   }
 
   return (
-    <Box p={4}>
+    <Box p={4} data-test="random-jokes-app">
       <Grid container direction="column" spacing={2}>
         {question && (
           <>
