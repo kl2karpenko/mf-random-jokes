@@ -14,13 +14,11 @@ export default function RandomJokes() {
       try {
         setLoading(true);
         const { data } = await api.getRandomJoke();
-        console.log(data, ' data ');
         setQuestion(data?.setup);
         setJoke(data?.punchline);
       } catch (e) {
         console.error(e);
       } finally {
-        console.log('finally');
         setLoading(false);
       }
     })();

@@ -20,7 +20,7 @@ describe('RandomJokes:', () => {
     expect(screen.getByTestId("jokes-loading")).toBeInTheDocument();
 
     await waitFor(() => screen.getByTestId("jokes-question"), {
-      timeout: 15000
+      timeout: 5000
     })
     expect(screen.getByTestId("jokes-question")).toBeInTheDocument();
     expect(screen.queryByTestId("jokes-loading")).not.toBeInTheDocument();
